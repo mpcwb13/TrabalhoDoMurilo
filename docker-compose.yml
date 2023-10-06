@@ -1,0 +1,12 @@
+version: '3'
+services:
+  db:
+    image: postgres:13
+    shm_size: 1g
+    command: [ "postgres", "-c", "log_statement=none" ]
+    environment:
+      POSTGRES_USER: murilo
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: murilo-dev
+    ports:
+      - "5432:5432"
